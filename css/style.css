@@ -245,6 +245,7 @@ img {
   display: none;
 }
 
+/* article css */
 article{
   padding: 10px;
   border: 1px solid var(--border);
