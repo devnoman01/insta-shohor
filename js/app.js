@@ -16,7 +16,7 @@ const isLiked = (id) => {
 };
 
 const addToLiked = (id) => {
-    likedPostsId.push(id); 
+    likedPostsId.push(id);
     showPosts(posts);
 };
 
@@ -35,15 +35,15 @@ const switchTab = (id) => {
         document.getElementById( "posts" ).style.display = "block";
         document.getElementById( "posts" ).style.display = "grid";
         document.getElementById( "liked-posts" ).style.display = "none";
-        document.getElementById( "reported" ).style.display = "none";
+        document.getElementById( "reported-posts" ).style.display = "none";
     } else if (id === "liked") {
         document.getElementById( "liked-posts" ).style.display = "block";
         document.getElementById( "posts" ).style.display = "none";
-        document.getElementById( "reported" ).style.display = "none";
+        document.getElementById( "reported-posts" ).style.display = "none";
 
         displayLikedPosts();
     } else {
-        document.getElementById( "reported" ).style.display = "block";
+        document.getElementById( "reported-posts" ).style.display = "block";
         document.getElementById( "posts" ).style.display = "none";
         document.getElementById( "liked-posts" ).style.display = "none";
 
@@ -52,7 +52,6 @@ const switchTab = (id) => {
 };
 
 const createPost = (post) => {
-  console.log(post);
     const image = post.image;
     const userImage = post.userImage;
     const div = document.createElement( "article" );
@@ -123,9 +122,9 @@ const createPost = (post) => {
                   <div class="post__description">
                     <small>
                       <a class="post__name--underline" href="#">
-                          ${post.comments[0].user}
+                          ${post.comments[0]?.user}
                       </a>
-                      ${post.comments[0].text}
+                      ${post.comments[0]?.text}
                     </small>
                   </div>
                   <span class="post__date-time">30 minutes ago</span>
@@ -156,6 +155,7 @@ const displayLikedPosts = () => {
 };
 
 const displayReportedPosts = () => {
+    document.getElementById( "reported" ).textContent = '';
     const reportedPosts = getReportedPosts();
     reportedPosts.forEach((post) => {
         const div = createPost(post);
