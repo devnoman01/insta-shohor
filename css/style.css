@@ -245,6 +245,16 @@ img {
   display: none;
 }
 
+article{
+  padding: 10px;
+  border: 1px solid var(--border);
+  margin-bottom: 25px;
+}
+.article-text{
+  text-align: justify;
+}
+
+
 @media only screen and (max-width: 992px) {
   #posts {
     grid-template-columns: repeat(2, 1fr);

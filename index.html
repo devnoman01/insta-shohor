@@ -84,6 +84,34 @@
                 </div>
             </div>
         </main>
+
+        <!-- bonus section -->
+        <section class="container">
+            <div id="articles-parent" class="my-4">
+                <h1 class="my-4 text-center">Popular Articles</h1>
+                <article>
+                    <h2 class="my-2">What does event loop do?</h2>
+                    <h6 class="mb-2">Posted by: Md. Abdullah</h6>
+                    <p class="article-text">Event loop handle asynchronous callbacks and handle multiple execution. JavaScript codes are interpreted and executed line by line in top to bottom direction. Each statements are forwarded in a stack and executed accordingly. But when any asynchronous statement is found which might slow down execution or take long time to be executed, its forwarded to queue to keep running while next synchronous statements keeps executing normally. This situation is called event loop. In the event loop, any asynchronous statement concurrently keeps running in a queue as well as synchronous statements in the stack. So, event loop helps to execute program faster, decrease execution time and handle multiple execution in efficient way.</p>
+                </article>
+                <article>
+                    <h2 class="my-2">Difference between sessionStorage and localStorage?</h2>
+                    <h6 class="mb-2">Posted by: Md. Abdullah</h6>
+                    <ol>
+                        <li>
+                            sessionStorage stores data on temporary basis that exist till the tab or window is open. As long as the tab or window is closed, all data in its sessionStorage will be cleared. But localStorage stores data permanently. That’s why data is not deleted when the tab or window is closed.
+                        </li>
+                        <li>
+                            sessionStorage data is deleted automatically. But localStorage data is deleted manually.
+                        </li>
+                        <li>
+                            sessionStorage works in a way that each tab or window will have its own session. But localStorage doesn’t follow the same procedure. 
+                        </li>
+                    </ol>
+                </article>
+            </div>
+        </section>
+        
         
         <footer></footer>
 

@@ -34,17 +34,20 @@ const switchTab = (id) => {
     if (id === "posts") {
         document.getElementById( "posts" ).style.display = "block";
         document.getElementById( "posts" ).style.display = "grid";
+        document.getElementById( "articles-parent" ).style.display = "block";
         document.getElementById( "liked-posts" ).style.display = "none";
         document.getElementById( "reported-posts" ).style.display = "none";
     } else if (id === "liked") {
         document.getElementById( "liked-posts" ).style.display = "block";
         document.getElementById( "posts" ).style.display = "none";
+        document.getElementById( "articles-parent" ).style.display = "none";
         document.getElementById( "reported-posts" ).style.display = "none";
 
         displayLikedPosts();
     } else {
         document.getElementById( "reported-posts" ).style.display = "block";
         document.getElementById( "posts" ).style.display = "none";
+        document.getElementById( "articles-parent" ).style.display = "none";
         document.getElementById( "liked-posts" ).style.display = "none";
 
         displayReportedPosts();
