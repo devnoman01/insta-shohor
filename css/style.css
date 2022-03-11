@@ -254,6 +254,10 @@ article{
 .article-text{
   text-align: justify;
 }
+.article-img{
+  height: 250px;
+  width: auto;
+}
 
 
 @media only screen and (max-width: 992px) {
